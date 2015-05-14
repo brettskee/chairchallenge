@@ -16,10 +16,11 @@ With 100 chairs in the room, the survivor should be chair # 31.
 ## Also, a few more thoughts:
 
 There are many ways that this code could be pruned to improve efficiency. In particular, here's at least a few quick ones:
-1. If the current number of chairs to skip is greater than the number of chairs left, we may be able to get to that chair in less operations by moving backwards.
-2. Once we have only 2 chairs left, we can figure out who the "survivor" will be without having to actually iterate over the list. If the current "skipCount" is even, it will be the chair that is not currently this.current. If odd, it the survivor will be this.current. Thus, we should be able to do do skipCount % 2 and iterate only that number of times.
 
-Additionally, I haven't implemented much error catching code here or dealt with any real edge cases. Like, for example, the "removeChairs" function doesn't bother to check and see if there's only 1 chair in the room (or none, for that matter). This wasn't really part of the challenge, but figured I'd mention it.
+  1. If the current number of chairs to skip is greater than the number of chairs left, we may be able to get to that chair in less operations by moving backwards.
+  2. Once we have only 2 chairs left, we can figure out who the "survivor" will be without having to actually iterate over the list. If the current "skipCount" is even, it will be the chair that is not currently this.current. If odd, it the survivor will be this.current. Thus, we should be able to do do skipCount % 2 and iterate only that number of times.
+
+Additionally, I haven't implemented much error catching code here or dealt with any real edge cases. Like, for example, the "removeChairs" function doesn't bother to check and see if there's only 1 chair in the room (or none, for that matter). This wasn't really part of the challenge, but I can't help but be irked by it a bit.
 
 ## To run it:
 
