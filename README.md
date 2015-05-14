@@ -22,4 +22,8 @@ Clone the repo.
 From the repo directory, run:
 `node app.js`
 
-> Thanks! This was fun!
+> Note:
+> If you'd like to test the same problem with a different number of chairs, feel free.
+> You can simply modify the code in the "main" function in app.js so that the fillRoom() call uses a different value for the 2nd parameter 'numChairs'
+
+Thanks! This was fun!
