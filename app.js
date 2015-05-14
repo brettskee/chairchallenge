@@ -11,7 +11,8 @@
 
 var CircularLinkedList = require('./CircularLinkedList.js');
 
-// Went a little bit further than necessary here I suppose. I made it so you can modify the number of chairs to fill the room with
+// Went a little bit further than necessary here I suppose. 
+// I made it so you can modify the number of chairs to fill the room with
 // so it will perform the same operation on a number other than 100 chairs.
 var fillRoom = function(room, numChairs) {
 	// This fills the room with 100 chairs, each with the right number
@@ -35,7 +36,7 @@ var removeChairs = function(room) {
 	}
 
 	// Once we are here there is only 1 chair left so we know who the survivor is
-	console.log("The survivor is chair number:", room.current.value);
+	return room.current.value;
 }
 
 
@@ -44,8 +45,10 @@ var main = function() {
 
 	// Set up our room
 	var room = new CircularLinkedList();
-	fillRoom(room, 15);
-	removeChairs(room); // Could have made this function return the surviving chair instead of course.
+	fillRoom(room, 100);
+
+	var survivor = removeChairs(room); // Function removes chairs and returns the surviving "chair" (don't really need to do this since 'room' is a reference type)
+	console.log("The survivor is in chair number:", survivor);
 
 }
 
